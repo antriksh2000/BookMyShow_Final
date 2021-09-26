@@ -2,17 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import Poster from "../Poster/Poster.Component";
 
-        const PosterImage = [
-            "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29/et00132576-cruhtytxcd-portrait.jpg",
-            "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29/et00137405-nwkkwtbszv-portrait.jpg",
-            "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29/et00097273-yfseqpmqgv-portrait.jpg",
-"https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29/et00314507-cmptdddftx-portrait.jpg",
-"https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29/et00056556-lwhmtnmxar-portrait.jpg",
-"https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29/et00314760-zlkzefhktt-portrait.jpg",
-"https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29/et00313347-mqpyfmycsw-portrait.jpg",
-"https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29/et00081136-nwpnruhhle-portrait.jpg",
-"https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29/et00311715-xaymgxnhnp-portrait.jpg",
-        ];
+        
 
 
 const PosterSlider = (props) => {
@@ -49,7 +39,7 @@ const PosterSlider = (props) => {
         ],
     };
 
-    const { posters, title, subtitle, isDark } = props;
+    const {posters, title, subtitle, isDark } = props;
 
     return (
         <>
@@ -70,8 +60,8 @@ const PosterSlider = (props) => {
                 </p>
             </div>
             <Slider {...settings}>
-                {PosterImage.map((each) => (
-                    <Poster src={each} isDark={isDark} />
+                {posters.map((each) => (
+                    <Poster {...each} isDark={isDark} />
                 ))}
             </Slider>
         </>
